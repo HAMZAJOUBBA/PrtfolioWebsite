@@ -30,7 +30,7 @@ body {
     margin: 0 auto;
     padding: 20px;
 }
-
+/*
 header {
     display: flex;
     justify-content: space-between;
@@ -46,11 +46,7 @@ header {
     -webkit-text-fill-color: transparent;
 }
 
-/*nav{
-            position: fixed;
-            /*background-color: yellow;
-            right: 20px;
-        }*/
+
 
 nav ul {
     display: flex;
@@ -69,7 +65,176 @@ nav a {
 
 nav a:hover {
     background: rgba(255, 255, 255, 0.1);
+}*/
+
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    position: relative;
+    z-index: 1000;
 }
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    background: linear-gradient(45deg, #4facfe, #00f2fe);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    z-index: 1001;
+}
+
+/* Desktop Navigation */
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    padding: 8px 15px;
+    border-radius: 20px;
+}
+
+nav a:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Hamburger Menu - Hidden on Desktop */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 5px;
+    z-index: 1001;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: linear-gradient(45deg, #4facfe, #00f2fe);
+    margin: 3px 0;
+    transition: 0.3s;
+    border-radius: 2px;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    /* Show hamburger on mobile */
+    .hamburger {
+        display: flex;
+    }
+    
+    /* Navigation for mobile */
+    nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 70%;
+        height: 100vh;
+        background: rgba(15, 27, 51, 0.95);
+        backdrop-filter: blur(10px);
+        transition: right 0.3s ease-in-out;
+        z-index: 1000;
+        padding: 80px 20px 20px 20px;
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3);
+    }
+    
+    nav.active {
+        right: 0;
+    }
+    
+    /* Mobile navigation list */
+    nav ul {
+        flex-direction: column;
+        gap: 0;
+        width: 100%;
+    }
+    
+    nav li {
+        width: 100%;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    nav a {
+        display: block;
+        padding: 15px 20px;
+        border-radius: 0;
+        font-size: 1.1rem;
+        transition: all 0.3s ease;
+    }
+    
+    nav a:hover {
+        background: rgba(255, 255, 255, 0.1);
+        padding-left: 30px;
+    }
+    
+    /* Hamburger animation */
+    .hamburger.active span:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+    
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .hamburger.active span:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+    
+    /* Adjust logo size for mobile */
+    .logo {
+        font-size: 1.5rem;
+    }
+}
+
+/* Small mobile devices */
+@media (max-width: 480px) {
+    nav {
+        width: 85%;
+    }
+    
+    .logo {
+        font-size: 1.3rem;
+    }
+    
+    nav a {
+        padding: 12px 20px;
+        font-size: 1rem;
+    }
+}
+
+
+/* Mobile menu overlay */
+.nav-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(2px);
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.nav-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/*---------------------- END NAVBAR ----------------------------*/
 
 .hero {
     display: flex;

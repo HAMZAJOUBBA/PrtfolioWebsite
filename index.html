@@ -6,8 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hamza Joubba | Full-Stack Developer</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    <script src="./JS/scriptAnimDrops.js"></script>
+    
     <script src="./JS/script.js"></script>
+    <script src="./JS/scriptAnimDrops.js"></script>
     <script src="./JS/cursorFunc.js"></script>
     <script src="./JS/AboutMeSection.js"></script>
     <link rel="stylesheet" type="text/css" href="./styles/style.css">
@@ -26,7 +27,13 @@
     <div class="content">
         <header>
             <div class="logo">JOUBBAHAMZA</div>
-            <nav>
+            <!-- Hamburger Menu Button -->
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <nav id="nav">
                 <ul>
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
@@ -36,7 +43,7 @@
                 </ul>
             </nav>
         </header>
-
+        <div class="nav-overlay" id="navOverlay"></div>
 
 
         <section class="hero" id="home">
@@ -172,7 +179,8 @@
                                             Developer"</span>,</div>
                                     <div class="code-line">&nbsp;&nbsp;passion: <span class="code-string">"Creating
                                             digital experiences"</span>,</div>
-                                    <div class="code-line">&nbsp;&nbsp;location: <span class="code-string">"Casablanca, Morocco"</span>,</div>
+                                    <div class="code-line">&nbsp;&nbsp;location: <span class="code-string">"Casablanca,
+                                            Morocco"</span>,</div>
                                     <div class="code-line">&nbsp;&nbsp;available: <span class="code-boolean">true</span>
                                     </div>
                                     <div class="code-line">};</div>

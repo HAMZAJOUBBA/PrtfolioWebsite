@@ -30,8 +30,7 @@ function initExperienceAnimations() {
     }
 }
 
-// Call this function after initializing Three.js
-initExperienceAnimations();
+
 
 
 
@@ -269,13 +268,98 @@ function initAboutAnimations() {
 
 
 
+// ------------------------- NAVIGATION BAR FOR MOBILE RESPONSITIVITY ----------------------------
+
+
+// Mobile navigation functionality
+function initMobileNavigation() {
+    const hamburger = document.getElementById('hamburger');
+    const nav = document.getElementById('nav');
+    const navLinks = document.querySelectorAll('nav a');
+    const overlay = document.getElementById('navOverlay');
+    
+    if (!hamburger || !nav) return;
+    
+    // Toggle mobile menu
+    hamburger.addEventListener('click', function() {
+        hamburger.classList.toggle('active');
+        nav.classList.toggle('active');
+        if (overlay) overlay.classList.toggle('active');
+        
+        // Prevent body scroll when menu is open
+        document.body.style.overflow = nav.classList.contains('active') ? 'hidden' : '';
+    });
+    
+    // Close menu when clicking on links
+    navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            hamburger.classList.remove('active');
+            nav.classList.remove('active');
+            if (overlay) overlay.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+    });
+    
+    // Close menu when clicking on overlay
+    if (overlay) {
+        overlay.addEventListener('click', function() {
+            hamburger.classList.remove('active');
+            nav.classList.remove('active');
+            overlay.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+    }
+    
+    // Close menu when clicking outside
+    document.addEventListener('click', function(event) {
+        const isClickInsideNav = nav.contains(event.target);
+        const isClickOnHamburger = hamburger.contains(event.target);
+        const isClickOnOverlay = overlay && overlay.contains(event.target);
+        
+        if (!isClickInsideNav && !isClickOnHamburger && !isClickOnOverlay && nav.classList.contains('active')) {
+            hamburger.classList.remove('active');
+            nav.classList.remove('active');
+            if (overlay) overlay.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+    });
+    
+    // Close menu on escape key
+    document.addEventListener('keydown', function(event) {
+        if (event.key === 'Escape' && nav.classList.contains('active')) {
+            hamburger.classList.remove('active');
+            nav.classList.remove('active');
+            if (overlay) overlay.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+    });
+    
+    // Handle window resize
+    window.addEventListener('resize', function() {
+        if (window.innerWidth > 768) {
+            // Reset mobile menu state on desktop
+            hamburger.classList.remove('active');
+            nav.classList.remove('active');
+            if (overlay) overlay.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+    });
+}
+
+
+
+
+
 
 // Call this after initializing Three.js
 document.addEventListener('DOMContentLoaded', function () {
-    initThreeJS();
+    //initThreeJS();
     // ... other initializations
+      // Call this function after initializing Three.js
+initExperienceAnimations();
     initAboutAnimations();
     initEnhancedProjectsAnimations();
+    initMobileNavigation();
 });
 
 
