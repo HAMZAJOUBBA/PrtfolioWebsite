@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hamza Joubba | Developer</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="./JS/scriptAnimDrops.js"></script>
+    <script src="./JS/script.js"></script>
+    <script src="./JS/cursorFunc.js"></script>
+    <script src="./JS/AboutMeSection.js"></script>
+    <link rel="stylesheet" type="text/css" href="./styles/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+</head>
+
+<body>
+    <!-- Water Drop Cursor -->
+    <div class="water-cursor">
+        <div class="cursor-drop"></div>
+    </div>
+    <div id="three-container"></div>
+
+    <div class="content">
+        <header>
+            <div class="logo">JOUBBAHAMZA</div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+
+
+        <section class="hero" id="home">
+            <h1 class="name">JOUBBA Hamza</h1>
+            <p class="title">Full Stack Developer & Interactive Experience Creator</p>
+            <a href="#projects" class="cta-button">Explore My Work</a>
+        </section>
+
+        <section class="features">
+            <div class="feature-card">
+                <i class="fas fa-code"></i>
+                <h3>Interactive Experiences</h3>
+                <p>Creating engaging web experiences with fluid animations and intuitive interactions.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-mobile-alt"></i>
+                <h3>Responsive Design</h3>
+                <p>Building websites that adapt seamlessly to all devices and screen sizes.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-rocket"></i>
+                <h3>Performance Focused</h3>
+                <p>Optimizing for speed and smooth interactions to enhance user experience.</p>
+            </div>
+        </section>
+
+
+
+
+
+
+
+
+
+
+        <!-- Add this after the hero section and before features -->
+        <section class="about" id="about">
+            <div class="container">
+                <h2 class="section-title">About Me</h2>
+                <p class="section-subtitle">Passionate developer crafting digital experiences with code and creativity
+                </p>
+
+                <div class="about-content">
+                    <div class="about-text">
+                        <div class="about-main">
+                            <h3>Hello! I'm Hamza, a Full-Stack Developer based in Casablanca</h3>
+                            <p>
+                                I specialize in creating immersive digital experiences that blend cutting-edge
+                                technology
+                                with intuitive design. With over 3 years in the industry, I've had the privilege of
+                                working
+                                with startups and established companies to bring their visions to life.
+                            </p>
+                            <p>
+                                My journey began with a curiosity about how things work, which evolved into a passion
+                                for
+                                building solutions that make a difference. I believe in writing clean, maintainable code
+                                and creating user experiences that feel magical.
+                            </p>
+
+                            <div class="about-stats">
+                                <div class="stat-item">
+                                    <div class="stat-number">5+</div>
+                                    <div class="stat-label">Projects Completed</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-number">2.5+</div>
+                                    <div class="stat-label">Years Experience</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-number">30+</div>
+                                    <div class="stat-label">Happy Clients</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="skills-section">
+                            <h4>Technical Skills</h4>
+                            <div class="skills-grid">
+                                <div class="skill-category">
+                                    <h5>Frontend</h5>
+                                    <div class="skill-tags">
+                                        <span class="skill-tag">React</span>
+                                        <span class="skill-tag">Angular.js</span>
+                                        <span class="skill-tag">TypeScript</span>
+                                        <span class="skill-tag">Three.js</span>
+                                        <span class="skill-tag">CSS3</span>
+                                        <span class="skill-tag">SCSS</span>
+                                    </div>
+                                </div>
+                                <div class="skill-category">
+                                    <h5>Backend</h5>
+                                    <div class="skill-tags">
+                                        <span class="skill-tag">Node.js</span>
+                                        <span class="skill-tag">PHP</span>
+                                        <span class="skill-tag">PlSql</span>
+                                        <span class="skill-tag">PostgreSQL</span>
+                                        <span class="skill-tag">Redis</span>
+                                        <span class="skill-tag">Docker</span>
+                                    </div>
+                                </div>
+                                <div class="skill-category">
+                                    <h5>Tools & Others</h5>
+                                    <div class="skill-tags">
+                                        <span class="skill-tag">Git</span>
+                                        <span class="skill-tag">AWS</span>
+                                        <span class="skill-tag">Figma</span>
+                                        <span class="skill-tag">FTP</span>
+                                        <span class="skill-tag">Adobe Photoshop/Illustrator</span>
+                                        <span class="skill-tag">Agile</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="about-visual">
+                        <div class="visual-card">
+                            <div class="code-snippet">
+                                <div class="code-header">
+                                    <div class="code-dots">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                    <span>about-me.js</span>
+                                </div>
+                                <div class="code-content">
+                                    <div class="code-line"><span class="code-keyword">const</span> developer = {</div>
+                                    <div class="code-line">&nbsp;&nbsp;name: <span class="code-string">"Hamza
+                                            Joubba"</span>,</div>
+                                    <div class="code-line">&nbsp;&nbsp;role: <span class="code-string">"Full-Stack
+                                            Developer"</span>,</div>
+                                    <div class="code-line">&nbsp;&nbsp;passion: <span class="code-string">"Creating
+                                            digital experiences"</span>,</div>
+                                    <div class="code-line">&nbsp;&nbsp;location: <span class="code-string">"Casablanca, Morocco"</span>,</div>
+                                    <div class="code-line">&nbsp;&nbsp;available: <span class="code-boolean">true</span>
+                                    </div>
+                                    <div class="code-line">};</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="fun-facts">
+                            <h4>Beyond Code</h4>
+                            <div class="facts-grid">
+                                <div class="fact-item">
+                                    <i class="fas fa-futbol"></i>
+                                    <span>Soccer Enthusiast</span>
+                                </div>
+                                <div class="fact-item">
+                                    <i class="fas fa-coffee"></i>
+                                    <span>Coffee Connoisseur</span>
+                                </div>
+                                <div class="fact-item">
+                                    <i class="fas fa-book"></i>
+                                    <span>Avid Reader</span>
+                                </div>
+                                <div class="fact-item">
+                                    <i class="fas fa-gamepad"></i>
+                                    <span>Indie Games</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cta-buttons">
+                    <a href="#projects" class="cta-button primary">
+                        <i class="fas fa-code"></i>
+                        View My Work
+                    </a>
+                    <a href="#contact" class="cta-button secondary">
+                        <i class="fas fa-paper-plane"></i>
+                        Get In Touch
+                    </a>
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+        <section class="experience" id="experience">
+            <h2 class="section-title">Professional Journey</h2>
+            <div class="timeline">
+                <!-- Experience Item 1 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2022 - Present</div>
+                        <h3 class="timeline-company">Business IT Solutions</h3>
+                        <h4 class="timeline-role">Senior Full Stack Developer</h4>
+                        <p class="timeline-description">
+                            Work as an assistant developer
+                            Architect scalable solutions and mentor junior developers while implementing
+                            cutting-edge technologies.
+                        </p>
+                        <div class="timeline-tech">
+                            <span class="tech-tag">Angular</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">TypeScript</span>
+                            <span class="tech-tag">Spring</span>
+                            <span class="tech-tag">PlSql-Postgresql</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experience Item 2 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">01/2020 - 06/2020</div>
+                        <h3 class="timeline-company">Octobot Consulting & Training</h3>
+                        <h4 class="timeline-role">Internship - web Developer</h4>
+                        <p class="timeline-description">
+                            Developed responsive web applications and interactive user interfaces using WordPress
+                            Collaborated with UX designers to create seamless user experiences
+                            and optimized applications for performance.
+                            Creation of a system management web app for insurance agencies.
+                        </p>
+                        <div class="timeline-tech">
+                            <span class="tech-tag">ASP.NET</span>
+                            <span class="tech-tag">sql</span>
+                            <span class="tech-tag">WORDPRESS</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experience Item 3 -->
+                <!-- <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2018 - 2020</div>
+                        <h3 class="timeline-company">StartUp Ventures</h3>
+                        <h4 class="timeline-role">Junior Web Developer</h4>
+                        <p class="timeline-description">
+                            Built and maintained company websites and web applications.
+                            Gained experience in full-stack development and agile methodologies
+                            while contributing to various client projects.
+                        </p>
+                        <div class="timeline-tech">
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">PHP</span>
+                            <span class="tech-tag">MySQL</span>
+                            <span class="tech-tag">jQuery</span>
+                            <span class="tech-tag">Bootstrap</span>
+                        </div>
+                    </div>
+                </div> -->
+
+                <!-- Experience Item 4 -->
+                <!--<div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2017 - 2018</div>
+                        <h3 class="timeline-company">Code Academy</h3>
+                        <h4 class="timeline-role">Web Development Intern</h4>
+                        <p class="timeline-description">
+                            Completed intensive web development bootcamp and internship program.
+                            Developed foundational skills in HTML, CSS, JavaScript and worked
+                            on real-world projects under mentorship.
+                        </p>
+                        <div class="timeline-tech">
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Git</span>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </section>
+
+
+        <section class="projects" id="projects">
+            <h2 class="section-title">Featured Projects</h2>
+            <p class="section-subtitle">A collection of my recent work showcasing full-stack development, creative
+                solutions, and technical expertise</p>
+
+            <!-- Project Filters -->
+            <div class="project-filters">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="web">Web Apps</button>
+                <button class="filter-btn" data-filter="mobile">Mobile</button>
+                <button class="filter-btn" data-filter="ai">AI/ML</button>
+                <button class="filter-btn" data-filter="game">Games</button>
+            </div>
+
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card" data-category="web">
+                    <div class="project-image">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">E-Commerce Platform</h3>
+                        <p class="project-description">
+                            A full-stack e-commerce solution with real-time inventory management,
+                            payment processing, and admin dashboard. Built with modern web technologies
+                            and optimized for performance.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">MongoDB</span>
+                            <span class="tech-tag">Stripe API</span>
+                            <span class="tech-tag">Redux</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                <i class="fas fa-external-link-alt"></i>
+                                Live Demo
+                            </a>
+                            <a href="#" class="project-link">
+                                <i class="fab fa-github"></i>
+                                Source Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card" data-category="ai">
+                    <div class="project-image">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">AI Content Generator</h3>
+                        <p class="project-description">
+                            An intelligent content generation tool using GPT-3.5 API. Features
+                            include automated blog writing, social media content, and SEO optimization
+                            suggestions with a user-friendly interface.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">FastAPI</span>
+                            <span class="tech-tag">OpenAI API</span>
+                            <span class="tech-tag">Vue.js</span>
+                            <span class="tech-tag">PostgreSQL</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                <i class="fas fa-external-link-alt"></i>
+                                Live Demo
+                            </a>
+                            <a href="#" class="project-link">
+                                <i class="fab fa-github"></i>
+                                Source Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <!--<div class="project-card" data-category="mobile">
+                    <div class="project-image">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Fitness Tracker App</h3>
+                        <p class="project-description">
+                            A cross-platform mobile application for tracking workouts, nutrition,
+                            and progress. Includes social features, workout plans, and integration
+                            with health APIs.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">React Native</span>
+                            <span class="tech-tag">Firebase</span>
+                            <span class="tech-tag">HealthKit</span>
+                            <span class="tech-tag">Chart.js</span>
+                            <span class="tech-tag">Push Notifications</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                <i class="fab fa-app-store"></i>
+                                App Store
+                            </a>
+                            <a href="#" class="project-link">
+                                <i class="fab fa-google-play"></i>
+                                Play Store
+                            </a>
+                        </div>
+                    </div>
+                </div>-->
+
+                <!-- Project 4 
+                <div class="project-card" data-category="game">
+                    <div class="project-image">
+                        <i class="fas fa-gamepad"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Space Explorer Game</h3>
+                        <p class="project-description">
+                            An interactive 3D space exploration game built with Three.js. Features
+                            procedurally generated planets, spaceship customization, and multiplayer
+                            capabilities.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Three.js</span>
+                            <span class="tech-tag">WebGL</span>
+                            <span class="tech-tag">Socket.io</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">WebRTC</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                <i class="fas fa-external-link-alt"></i>
+                                Play Game
+                            </a>
+                            <a href="#" class="project-link">
+                                <i class="fab fa-github"></i>
+                                Source Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                 Project 5
+                <div class="project-card" data-category="web">
+                    <div class="project-image">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Analytics Dashboard</h3>
+                        <p class="project-description">
+                            A real-time business intelligence dashboard with interactive charts,
+                            data visualization, and automated reporting. Processes large datasets
+                            and provides actionable insights.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">TypeScript</span>
+                            <span class="tech-tag">D3.js</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Redis</span>
+                            <span class="tech-tag">Docker</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                <i class="fas fa-external-link-alt"></i>
+                                Live Demo
+                            </a>
+                            <a href="#" class="project-link">
+                                <i class="fab fa-github"></i>
+                                Source Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                 Project 6 -->
+                <div class="project-card" data-category="ai">
+                    <div class="project-image">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Image Recognition API</h3>
+                        <p class="project-description">
+                            A machine learning API for image classification and object detection.
+                            Supports multiple models, batch processing, and real-time analysis
+                            with high accuracy rates.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">TensorFlow</span>
+                            <span class="tech-tag">Flask</span>
+                            <span class="tech-tag">OpenCV</span>
+                            <span class="tech-tag">AWS Lambda</span>
+                            <span class="tech-tag">REST API</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                <i class="fas fa-external-link-alt"></i>
+                                API Docs
+                            </a>
+                            <a href="#" class="project-link">
+                                <i class="fab fa-github"></i>
+                                Source Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="projects-cta">
+                <a href="https://github.com/Hamza-joubba" class="github-button" target="_blank">
+                    <i class="fab fa-github"></i>
+                    View More on GitHub
+                </a>
+            </div>
+        </section>
+
+
+        <section class="contact" id="contact">
+            <h2 class="section-title">Get In Touch</h2>
+            <p class="section-subtitle">I'm always open to discussing new opportunities, creative projects, or potential
+                collaborations. Let's bring your ideas to life!</p>
+
+            <div class="contact-container">
+                <!-- Contact Information -->
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Email Me</h3>
+                            <p>Feel free to send me a message anytime</p>
+                            <a href="mailto:joubba.hamza@gmail.com" class="contact-link">joubba.hamza@gmail.com</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Call Me</h3>
+                            <p>Available for calls Monday to Friday</p>
+                            <a href="tel:+1234567890" class="contact-link">+212 678559647</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Location</h3>
+                            <p>Based in Casablanca, Morocco</p>
+                            <p>Open to remote opportunities worldwide</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Response Time</h3>
+                            <p>I typically reply within 24 hours</p>
+                            <p>Urgent inquiries: Within 2-4 hours</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name" class="form-label">Full Name</label>
+                            <input type="text" id="name" name="name" class="form-input"
+                                placeholder="Enter your full name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email Address</label>
+                            <input type="email" id="email" name="email" class="form-input"
+                                placeholder="Enter your email address" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject" class="form-label">Subject</label>
+                            <input type="text" id="subject" name="subject" class="form-input"
+                                placeholder="What is this regarding?" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea id="message" name="message" class="form-textarea"
+                                placeholder="Tell me about your project or inquiry..." required></textarea>
+                        </div>
+
+                        <button type="submit" class="submit-btn">
+                            <span class="btn-text">Send Message</span>
+                        </button>
+
+                        <div id="formStatus" class="contact-status"></div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Social Links -->
+            <div class="social-links-contact">
+                <a href="https://github.com/Hamza-Joubba" class="social-link-contact" target="_blank">
+                    <i class="fab fa-github"></i>
+                    GitHub
+                </a>
+                <a href="https://linkedin.com/in/yourusername" class="social-link-contact" target="_blank">
+                    <i class="fab fa-linkedin"></i>
+                    LinkedIn
+                </a>
+                <a href="https://twitter.com/yourusername" class="social-link-contact" target="_blank">
+                    <i class="fab fa-twitter"></i>
+                    Twitter
+                </a>
+                <a href="https://codepen.io/hamza-jb-the-sans" class="social-link-contact" target="_blank">
+                    <i class="fab fa-codepen"></i>
+                    CodePen
+                </a>
+                <a href="https://dribbble.com/yourusername" class="social-link-contact" target="_blank">
+                    <i class="fab fa-dribbble"></i>
+                    Dribbble
+                </a>
+            </div>
+        </section>
+
+        <footer>
+            <p>Connect with me on social media</p>
+            <div class="social-links">
+                <a href="https://github.com/Hamza-Joubba"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="https://codepen.io/hamza-jb-the-sans"><i class="fab fa-codepen"></i></a>
+            </div>
+            <p style="margin-top: 20px;">&copy; JOUBBA Hamza. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <div class="cursor-info">Move your cursor to interact with the bubbles</div>
+
+    <!-- Font Awesome for icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
