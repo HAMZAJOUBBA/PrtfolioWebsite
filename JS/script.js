@@ -282,6 +282,7 @@ function initMobileNavigation() {
     
     // Toggle mobile menu
     hamburger.addEventListener('click', function() {
+        console.log("hambergr click");
         hamburger.classList.toggle('active');
         nav.classList.toggle('active');
         if (overlay) overlay.classList.toggle('active');
@@ -356,10 +357,11 @@ document.addEventListener('DOMContentLoaded', function () {
     //initThreeJS();
     // ... other initializations
       // Call this function after initializing Three.js
-initExperienceAnimations();
+      initMobileNavigation();
+    initExperienceAnimations();
     initAboutAnimations();
     initEnhancedProjectsAnimations();
-    initMobileNavigation();
+    
 });
 
 
