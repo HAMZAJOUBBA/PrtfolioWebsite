@@ -352,6 +352,67 @@ function initMobileNavigation() {
 
 
 
+
+
+// Contact form functionality with Formspree
+document.addEventListener('DOMContentLoaded', function() {
+    const contactForm = document.getElementById('contactForm');
+    const formStatus = document.getElementById('formStatus');
+
+    if (contactForm) {
+        contactForm.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const submitBtn = this.querySelector('.submit-btn');
+            const btnText = submitBtn.querySelector('.btn-text');
+            
+            // Show loading state
+            btnText.textContent = 'Sending...';
+            submitBtn.disabled = true;
+            formStatus.style.display = 'block';
+            formStatus.textContent = 'Sending your message...';
+            formStatus.className = 'contact-status';
+
+            try {
+                const formData = new FormData(this);
+                
+                const response = await fetch(this.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+
+                if (response.ok) {
+                    // Success message
+                    formStatus.textContent = 'Thank you! Your message has been sent successfully. I\'ll get back to you soon.';
+                    formStatus.className = 'contact-status success';
+                    contactForm.reset();
+                } else {
+                    throw new Error('Form submission failed');
+                }
+            } catch (error) {
+                // Error message
+                formStatus.textContent = 'Oops! There was a problem sending your message. Please try again or email me directly at joubba.hamza@gmail.com';
+                formStatus.className = 'contact-status error';
+            } finally {
+                // Reset button
+                btnText.textContent = 'Send Message';
+                submitBtn.disabled = false;
+                
+                // Hide status message after 8 seconds
+                setTimeout(() => {
+                    formStatus.style.display = 'none';
+                }, 8000);
+            }
+        });
+    }
+});
+
+
+
+
 // Call this after initializing Three.js
 document.addEventListener('DOMContentLoaded', function () {
     //initThreeJS();
